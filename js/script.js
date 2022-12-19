@@ -14,9 +14,25 @@ let calculatorB = document.querySelector('#calculate-b');
 let nameMonsterB = document.querySelector('#name_b');
 let clickButtonNameB = document.querySelector('#insert_name-b');
 let insertNameB = document.querySelector('#name_monster-b');
-
-
 let resultB = document.querySelector('#result-b');
+// Variabili C
+let lifeC = document.querySelector('#life-c_my');
+let dangerC = document.querySelector('#danger-c_my');
+let calculatorC = document.querySelector('#calculate-c');
+
+let nameMonsterC = document.querySelector('#name_c');
+let clickButtonNameC = document.querySelector('#insert_name-c');
+let insertNameC = document.querySelector('#name_monster-c');
+let resultC = document.querySelector('#result-c');
+// Variabili D
+let lifeD = document.querySelector('#life-d_my');
+let dangerD = document.querySelector('#danger-d_my');
+let calculatorD = document.querySelector('#calculate-d');
+
+let nameMonsterD = document.querySelector('#name_d');
+let clickButtonNameD = document.querySelector('#insert_name-d');
+let insertNameD = document.querySelector('#name_monster-d');
+let resultD = document.querySelector('#result-d');
 //array
 
 //funzione calcolo
@@ -61,4 +77,42 @@ clickButtonNameB.addEventListener('click', ()=>{
 	
  });
 
- 
+ // C
+
+ function calculatorLifeC(lifeC, dangerC){
+	
+	let toltalLifeC = lifeC - dangerC;
+
+	return toltalLifeC;
+ }
+// eventi 
+clickButtonNameC.addEventListener('click', ()=>{
+	let nameInsertCTotal = insertNameC.value;
+	nameMonsterC.innerHTML = nameInsertCTotal;
+	console.log(nameInsertCTotal);
+});
+ calculatorC.addEventListener('click', ()=>{
+	let resultLifeC = calculatorLifeC(lifeC.value, dangerC.value);
+	resultC.innerHTML = resultLifeC;
+	
+ });
+
+ //D
+
+ function calculatorLifeD(lifeD, dangerD){
+	
+	let toltalLifeD = lifeD - dangerD;
+
+	return toltalLifeD;
+ }
+// eventi 
+clickButtonNameD.addEventListener('click', ()=>{
+	let nameInsertDTotal = insertNameD.value;
+	nameMonsterD.innerHTML = nameInsertDTotal;
+	console.log(nameInsertDTotal);
+});
+ calculatorD.addEventListener('click', ()=>{
+	let resultLifeD = calculatorLifeD(lifeD.value, dangerD.value);
+	resultD.innerHTML = resultLifeD;
+	
+ });
